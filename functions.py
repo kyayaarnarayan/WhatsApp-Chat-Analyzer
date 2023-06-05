@@ -67,7 +67,7 @@ def getStats(df):
     temp = df[df['User'] == 'Notifications']
     df.drop(temp.index, inplace=True)
     print("h4")
-    # extractor = urlextract.URLExtract()
+    extractor = urlextract.URLExtract()
     print("h3")
     links = []
     for msg in df['Message']:
