@@ -6,7 +6,7 @@ import seaborn as sns
 import streamlit as st
 from collections import Counter
 import matplotlib.pyplot as plt
-# import urlextract
+import urlextract
 import emoji
 from wordcloud import WordCloud
 
@@ -70,10 +70,10 @@ def getStats(df):
     # extractor = urlextract.URLExtract()
     print("h3")
     links = []
-    # for msg in df['Message']:
-    #     x = extractor.find_urls(msg)
-    #     if x:
-    #         links.extend(x)
+    for msg in df['Message']:
+        x = extractor.find_urls(msg)
+        if x:
+            links.extend(x)
     links_cnt = len(links)
     word_list = []
     for msg in df['Message']:
